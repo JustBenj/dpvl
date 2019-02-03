@@ -1,9 +1,8 @@
 #include <SPI.h>
-#include <UWRT_ABP.h>
+#include "src/UWRT_ABP/UWRT_ABP.h"
 
 #define NUM_SENSE 5
 
-int sensor[] = {3, 4, 5, 6, 7};
 unsigned long stamp;
 
 byte raw[NUM_SENSE][4];
@@ -13,23 +12,28 @@ bool started = false;
 
 using namespace UWRT;
 
-ABP sense(3);
+int pins[] = {5};
+ABParray* sense;
 
 void setup() {
  
   Serial.begin(19200);
 
-  // NEED THIS LINE!!!!
-  SPI.begin();
-  SPI.beginTransaction(SPISettings(800000, MSBFIRST, SPI_MODE0));
+  sense = new ABParray(1, pins);
+
+  sense->Init();
+  unsigned long m = millis();
+  Serial.println(m);
+
   delay(500);
 }
 
 void loop() {
-  int stat = sense.Update();
-  char str[20];
-  sense.ToString(str);
+  sense->Update();
+  char str[100] = "";
 
-  Serial.println(str);
-  delay(100);
+  sense->Report(str);
+  //Serial.println(str);
+
+  delay(2000);
 }
