@@ -1,0 +1,80 @@
+\hypertarget{classUWRT_1_1AbpArray}{}\section{U\+W\+RT\+:\+:Abp\+Array Class Reference}
+\label{classUWRT_1_1AbpArray}\index{U\+W\+R\+T\+::\+Abp\+Array@{U\+W\+R\+T\+::\+Abp\+Array}}
+
+
+Array of A\+BP objects.  
+
+
+
+
+{\ttfamily \#include $<$U\+W\+R\+T\+\_\+\+A\+B\+P.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classUWRT_1_1AbpArray_a3cfefe21f4052fd4ce99448a00e28bcf}{Abp\+Array} (int num, int $\ast$pins)
+\begin{DoxyCompactList}\small\item\em Construct a new \hyperlink{classUWRT_1_1AbpArray}{Abp\+Array} object. \end{DoxyCompactList}\item 
+void \hyperlink{classUWRT_1_1AbpArray_a362852eb7db6909f9aaf5177d4f77bdb}{init} ()\hypertarget{classUWRT_1_1AbpArray_a362852eb7db6909f9aaf5177d4f77bdb}{}\label{classUWRT_1_1AbpArray_a362852eb7db6909f9aaf5177d4f77bdb}
+
+\begin{DoxyCompactList}\small\item\em Initialize the Arduino S\+PI hardware. \end{DoxyCompactList}\item 
+void \hyperlink{classUWRT_1_1AbpArray_aa5e62613fc51b379fec332d0dcdf5880}{update} ()\hypertarget{classUWRT_1_1AbpArray_aa5e62613fc51b379fec332d0dcdf5880}{}\label{classUWRT_1_1AbpArray_aa5e62613fc51b379fec332d0dcdf5880}
+
+\begin{DoxyCompactList}\small\item\em Update each sensor\textquotesingle{}s latest measurement. \end{DoxyCompactList}\item 
+void \hyperlink{classUWRT_1_1AbpArray_a83d1762b96a0d099707e1c6dae1b74fd}{report} (char $\ast$buff)
+\begin{DoxyCompactList}\small\item\em Read each sensors latest measurement. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Array of A\+BP objects. 
+
+This class contains functions useful for efficiently reading from multiple A\+BP sensors at a time. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{U\+W\+R\+T\+::\+Abp\+Array@{U\+W\+R\+T\+::\+Abp\+Array}!Abp\+Array@{Abp\+Array}}
+\index{Abp\+Array@{Abp\+Array}!U\+W\+R\+T\+::\+Abp\+Array@{U\+W\+R\+T\+::\+Abp\+Array}}
+\subsubsection[{\texorpdfstring{Abp\+Array(int num, int $\ast$pins)}{AbpArray(int num, int *pins)}}]{\setlength{\rightskip}{0pt plus 5cm}U\+W\+R\+T\+::\+Abp\+Array\+::\+Abp\+Array (
+\begin{DoxyParamCaption}
+\item[{int}]{num, }
+\item[{int $\ast$}]{pins}
+\end{DoxyParamCaption}
+)}\hypertarget{classUWRT_1_1AbpArray_a3cfefe21f4052fd4ce99448a00e28bcf}{}\label{classUWRT_1_1AbpArray_a3cfefe21f4052fd4ce99448a00e28bcf}
+
+
+Construct a new \hyperlink{classUWRT_1_1AbpArray}{Abp\+Array} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em num} & The number of sensors \\
+\hline
+{\em pins} & S\+PI chip select pin number for each sensor \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{U\+W\+R\+T\+::\+Abp\+Array@{U\+W\+R\+T\+::\+Abp\+Array}!report@{report}}
+\index{report@{report}!U\+W\+R\+T\+::\+Abp\+Array@{U\+W\+R\+T\+::\+Abp\+Array}}
+\subsubsection[{\texorpdfstring{report(char $\ast$buff)}{report(char *buff)}}]{\setlength{\rightskip}{0pt plus 5cm}void U\+W\+R\+T\+::\+Abp\+Array\+::report (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{buff}
+\end{DoxyParamCaption}
+)}\hypertarget{classUWRT_1_1AbpArray_a83d1762b96a0d099707e1c6dae1b74fd}{}\label{classUWRT_1_1AbpArray_a83d1762b96a0d099707e1c6dae1b74fd}
+
+
+Read each sensors latest measurement. 
+
+Gives the report in the form of a comma delimitted string of values of the form\+:
+
+$<$timestamp$>$,$<$pressure\+\_\+1$>$,$<$pressure\+\_\+2$>$, . . ., $<$pressure\+\_\+\+N$>$
+
+
+\begin{DoxyParams}{Parameters}
+{\em buff} & Buffer to store the \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+arduino/read\+A\+B\+P/src/\+U\+W\+R\+T\+\_\+\+A\+B\+P/\hyperlink{UWRT__ABP_8h}{U\+W\+R\+T\+\_\+\+A\+B\+P.\+h}\item 
+arduino/read\+A\+B\+P/src/\+U\+W\+R\+T\+\_\+\+A\+B\+P/U\+W\+R\+T\+\_\+\+A\+B\+P.\+cpp\end{DoxyCompactItemize}
